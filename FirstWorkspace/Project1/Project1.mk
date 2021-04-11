@@ -5,15 +5,15 @@
 ## Debug
 ProjectName            :=Project1
 ConfigurationName      :=Debug
-WorkspacePath          :=C:/Users/richa/Documents/FirstWorkspace/Udemy-Cpp-Course
-ProjectPath            :=C:/Users/richa/Documents/FirstWorkspace/Udemy-Cpp-Course/Project1
+WorkspacePath          :=C:/Users/richa/Documents/CodeliteWorkspace/Udemy-Cpp-Course/FirstWorkspace
+ProjectPath            :=C:/Users/richa/Documents/CodeliteWorkspace/Udemy-Cpp-Course/FirstWorkspace/Project1
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=richa
-Date                   :=09/04/2021
+Date                   :=11/04/2021
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :="C:/Program Files/mingw-w64/mingw64/bin/g++.exe"
 SharedObjectLinkerName :="C:/Program Files/mingw-w64/mingw64/bin/g++.exe" -shared -fPIC
@@ -95,7 +95,7 @@ PreBuild:
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/richa/Documents/FirstWorkspace/Udemy-Cpp-Course/Project1/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/richa/Documents/CodeliteWorkspace/Udemy-Cpp-Course/FirstWorkspace/Project1/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
