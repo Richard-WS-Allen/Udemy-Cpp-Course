@@ -13,3 +13,7 @@ Section Four:
 In this section, we were to write another simple program. This time to prompt the user for their favorite number and print:
 "Amazing! That's my favorite number too!"
 "No really, *user number* is my favorite number!:
+
+Section Five:
+
+Section five was just an overview of the structure of C++ programs including: how the compiler sees comments, preprocessor directives, the main() function, namespaces, and basic I/O.
