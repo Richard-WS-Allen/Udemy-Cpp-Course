@@ -1,0 +1,14 @@
+#Codelite files
+*.txt
+*.tags
+*.o
+*.session
+*.richa
+*.workspace
+*.d
+*.exe
+*.d
+*.mk
+*.project
+*tags
+*Makefile
