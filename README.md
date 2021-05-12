@@ -17,3 +17,7 @@ In this section, we were to write another simple program. This time to prompt th
 Section Five:
 
 Section five was just an overview of the structure of C++ programs including: how the compiler sees comments, preprocessor directives, the main() function, namespaces, and basic I/O.
+
+Section Six:
+
+Section six went over constants and other variables. This included using sizeof to see bytes used by different types and min and max, to see the minimum and maximum values of some of the basic types. I found it interesting on my Windows machine the sizeof, min, and max were the same for int and long. However, on my Linux machine, long and long long were the same. There was also a challenge to make a carpet cleaning service calculator using user input (number of small and large rooms) and output of price (subtotal and total with tax). I also took some time to do the setup steps for my new Linux machine before continuing to the next sections.
