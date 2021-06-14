@@ -7,13 +7,12 @@ int main()
 {
     /*---------Section 9 Challenge---------
      * Output a menu that allows:
-     * A-Adding a number to a list
-     * P-Printing the list
-     * C-Clearing the list
-     * M-Output the mean of numbers in the list
-     * H-Output the max number in the list
-     * L-Output the minimum number in the list
-     * Q-Quit
+       P - Print numbers
+       A - Add a number
+       M - Display mean of the numbers
+       S - Display the smallest number
+       L - Display the largest number
+       Q - Quit
     */
     
     vector <int> vec;
@@ -27,8 +26,8 @@ int main()
         cout << "P - Print numbers\n"
         "A - Add a number\n"
         "M - Display mean of the numbers\n"
-        "L - Display the lowest number\n"
-        "H - Display the highest number\n"
+        "S - Display the smallest number\n"
+        "L - Display the largest number\n"
         "Q - Quit\n\n"
         "Enter your choice: ";
         
@@ -69,27 +68,33 @@ int main()
                 {
                     cout << n << " ";
                 }
-                cout << "]" << endl;
+                cout << "]" << endl << endl;
                 break;
             
             case 'm':
             case 'M':
                 if(vec.size() == 0)
                 {
-                    cout << "Error - No entries have been made" << endl;
+                    cout << "Error - No entries have been made" << endl << endl;
                     break;
                 }
-                cout << "The mean of the list is: " << (double) sum / vec.size() << endl;
+                cout << "The mean of the list is: " << (double) sum / vec.size() << endl << endl;
+                break;
+            
+            case 's':
+            case 'S':
+                if (!numberAdded)
+                    cout << "Error - No entries have been made" << endl << endl;
+                else
+                    cout << "The smallest number is: " << min << endl << endl;
                 break;
             
             case 'l':
             case 'L':
-                cout << "The smallest number is: " << min << endl;
-                break;
-            
-            case 'h':
-            case 'H':
-                cout << "The largest number is: " << max << endl;
+                if (!numberAdded)
+                    cout << "Error - No entries have been made" << endl << endl;
+                else
+                    cout << "The largest number is: " << max << endl << endl;
                 break;
             
             default:
