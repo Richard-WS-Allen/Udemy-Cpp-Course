@@ -25,3 +25,12 @@ Section six went over constants and other variables. This included using sizeof 
 ## Section Seven:
 
 Section Seven was all about arrays and vectors, including the benefits and drawbacks of each, initializing them, and multidimensional arrays(vectors).
+
+
+## Section Eight, Nine, and Ten:
+
+I took a break from working through this course after completing these sections and partially through section 11. These were completed about 6 months before finally merging. I'm a little hazy on the details from these, but can see that in the course tree it covered control structures (if/else statements and loops), and working with strings in C++. This was mostly straightforward, from what I remember. But going back over the details of these subjects can always be helpful. I know I've had bugs pop up in my code that were hard to find, and it was something simple (one example was when I added a line of code to what I thought was the if branch, but didn't use braces when I first wrote that if branch because it was only one line, a simple fix, but sometimes hard to discover).
+
+## Section Eleven:
+
+This section is a little more fresh, although half of it was completed months ago. The second half was really helpful for a lot of forgotten details about C++ functions. This course also did a great job of going over recursion and the stack, and when recursion can be useful and when to stay away from it, for potential stack overflow. I remember during my undergrad, stack overflow got me on one of my final projects, in recursively destroying a binary search tree. I really enjoyed working through the second half of this section, going back over the little details that are easy to forget was very helpful.
