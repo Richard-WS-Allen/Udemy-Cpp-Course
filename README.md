@@ -29,7 +29,7 @@ Section Seven was all about arrays and vectors, including the benefits and drawb
 
 ## Section Eight, Nine, and Ten:
 
-I took a break from working through this course after completing these sections and partially through section 11. These were completed about 6 months before finally merging. I'm a little hazy on the details from these, but can see that in the course tree it covered control structures (if/else statements and loops), and working with strings in C++. This was mostly straightforward, from what I remember. But going back over the details of these subjects can always be helpful. I know I've had bugs pop up in my code that were hard to find, and it was something simple (one example was when I added a line of code to what I thought was the if branch, but didn't use braces when I first wrote that if branch because it was only one line, a simple fix, but sometimes hard to discover).
+I took a break from working through this course, as I was starting a new position. Sections eight, nine and ten were completed prior to taking a break. These were completed about 6 months before finally merging, so I'm a little hazy on the details of what these covered, but can see that in the course tree it covered control structures (if/else statements and loops), and working with strings in C++. This was mostly straightforward, from what I remember. But going back over the details of these subjects can always be helpful. I know I've had bugs pop up in my code that were hard to find, and it was something simple, such as not including braces for an if statement, and later adding another line, only to discover that line of code was always being executed and quickly realizing the mistake, once I discovered the problem.
 
 ## Section Eleven:
 
