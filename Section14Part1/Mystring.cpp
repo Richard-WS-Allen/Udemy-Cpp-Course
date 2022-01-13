@@ -162,7 +162,7 @@ bool Mystring::operator==(const Mystring &rhs) const{
     return std::strcmp(str, rhs.str) == 0;
 }
 bool Mystring::operator!=(const Mystring &rhs) const{
-    return !std::strcmp(str, rhs.str) == 0;
+    return !(std::strcmp(str, rhs.str) == 0);
 }
 bool Mystring::operator<(const Mystring &rhs) const{
     return std::strcmp(str, rhs.str) < 0;
