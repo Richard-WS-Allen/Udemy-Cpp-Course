@@ -58,3 +58,20 @@ Section 16 covered polymorphism, specifically acheiving dynamic polymorphism thr
 ## Section Seventeen:
 
 This section covered smart pointers (unique, shared, and weak). I'm happy I finally got to this section. The course explains the problems associated with raw pointers and mentioned smart pointers much earlier. It was nice to see these in action and how to use them. It also explained how the pointers differ from each other. Unique, as it sounds, cannot be shared, but can be moved. Shared keeps a track of references so that it knows when it can be deleted. Weak is like shared, except it doesn't have ownership, so in cases like doubly-linked-lists, you don't end up with two objects pointing to each other and not allowing them to be deleted. It also went over the ability to make custom deleters, which I'm not exactly sure of a use case for them right now. Hopefully I can find one in the future. In this sections challenge, we were to implement the three functions that had been prototyped for us in the provided main.
+
+## Section Eighteen:
+
+In section 18 I took a deeper dive into exception handling than I ever have before. This was a good section to learn more about how exceptions are thrown and then how stack unwinding occurs. I have used exception handling and throwing new exceptions in Java, but have never really looked into or considered some of the implications within c++. The course brings up good points about where you catch the exception can change the behavior, especially if you're multiple function calls deep, but have the catch a few levels up. If you're using pointers in one of those function calls, but don't delete until after a function call, that section of code won't be executed because of how the stack unwinds. That's why it's important to really understand what happens when an exception is thrown and how to properly handle it.
+
+## Section Nineteen:
+
+This was a fun section, working with input and output files, and formatting output. I had recently done a HackerRank problem that required formatting output (specifically formatting a number as hex, and in scientific notation). Because I hadn't looked much into this, I had to look up the string manipulators that would accomplish this, had I waited to complete the challenge until I had done this section it would have been a breeze!
+There was four parts to the challenges of this section. 
+
+Part 1 required just formatting the output of some structs, into a table format.
+
+Part 2 was reading from an input file that had an answer key, student names, and their responses. Then outputting to std::cout a table of student names, scores, and the average score.
+
+Part 3 was much more fun, in my opinion, of using an input file of Romeo and Juliet and letting a user search for a substring. The video solution showed reading in each word, and checking that word for the substring. However, doing this would miss if the substring was in a word multiple times. So I instead chose to check each character against the first character of the search word. Then loop through the remaining letters of the word to check for a complete match. If I reach a letter that doesn't match, I check if it is the first character of the search word again and (using goto with labels) go back to the inner loop, if not go back to the outer loop to continue searching. I found more matches with this comparing the different approaches. Especially if the search word was small (one or two characters).
+
+Part 4 involve copying an input file of Romeo and Juliet and prepending line numbers. I found in this one, while the video solution could check if line == "" to avoid numbering and counting blank lines, that I couldn't. The return character '\r' was the issue, so I instead checked for '\r' or '\n' to cover theses cases.
