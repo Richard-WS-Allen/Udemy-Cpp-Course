@@ -30,11 +30,11 @@ int main() {
     int line_number{1};
     
     while(getline(in_file, line)){
-        // line == "" did not work as I expected. Using size check, probably a newline or return character
-        // Video solution in course used line == "". Not sure why it did not correctly for me
-        if(line == "\r" ) { //|| line == "\n") {
+        // Blank line, skip numbering and increment
+        if(line == "\r" || line == "\n" || line == "") {
             out_file << std::endl;
         }
+        // Write line with prepended line number
         else {
             out_file << std::setw(5) << std::left << line_number++ << line << std::endl;
         }
