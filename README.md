@@ -66,7 +66,7 @@ In section 18 I took a deeper dive into exception handling than I ever have befo
 ## Section Nineteen:
 
 This was a fun section, working with input and output files, and formatting output. I had recently done a HackerRank problem that required formatting output (specifically formatting a number as hex, and in scientific notation). Because I hadn't looked much into this, I had to look up the string manipulators that would accomplish this, had I waited to complete the challenge until I had done this section it would have been a breeze!
-There was four parts to the challenges of this section. 
+There was four parts to the challenges of this section. Then we also went over stringstreams and how to use them, especially to validate inputs. The challenge descriptions are as follows:
 
 Part 1 required just formatting the output of some structs, into a table format.
 
