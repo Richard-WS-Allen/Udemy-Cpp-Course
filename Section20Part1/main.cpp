@@ -13,7 +13,7 @@ bool is_palindrome(const std::string& s)
 {
     // You must implement this function.
     // Since we are learning the STL - use a deque to solve the problem.
-    
+    /*
     // Using deque
     std::deque<char> d;
     for(char c : s){
@@ -31,13 +31,13 @@ bool is_palindrome(const std::string& s)
         d.pop_front();
     }
     return true;
-    /*
+    */
     // Checking in place
     auto it = s.begin();
     // Using end() for std::distance in while loop
     // instead of rbegin() which gives compilation error in distance()
     // distance can only compare iterators, not iterator and reverse iterator
-    auto itr = s.end();
+    auto itr = s.end() - 1;
     while(std::distance(it,itr) > 0){
         // Both alpha
         if(std::isalpha(*it) && std::isalpha(*itr)){
@@ -58,7 +58,7 @@ bool is_palindrome(const std::string& s)
     }
     // Exited loop, must be a palindrome
     return true;
-    */
+    
 }
 
 int main()
@@ -72,7 +72,7 @@ int main()
     std::cout << std::boolalpha;
     std::cout << std::setw(8) << std::left << "Result" << "String" << std::endl;
     for(const auto& s : test_strings) {
-        std::cout << std::setw(8) << std::left << is_palindrome(s)  << s << std::endl;
+        std::cout << std::setw(8) << std::left << is_palindrome(s) << s << std::endl;
     }
     
     auto runtime = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - start);
