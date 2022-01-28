@@ -4,6 +4,13 @@
 #include <iostream>
 #include <fstream>
 
+int get_word_count(int count, size_t pos, const std::string &current_word, const std::string &search_word){
+    pos = current_word.find(search_word, pos);
+    if(pos == std::string::npos)
+        return count;
+    else
+        return get_word_count(++count, pos + search_word.length(), current_word, search_word);
+}
 
 int main() {
     
@@ -26,18 +33,17 @@ int main() {
     std::cin >> word;
     std::cout << std::endl;
     
-    char c;
+    // char c;
     int word_count {0};
     std::string curr_word{};
     
-    /*
+    
     while(in_file >> curr_word){
-        std::size_t found = curr_word.find(word);
-        if(found != std::string::npos)
-            word_count++;
-    }*/
+        int count = get_word_count(0, 0, curr_word, word);
+        word_count += count;
+    }
     
-    
+    /*
     OUTER:while(in_file.get(c)){
         // Found first letter, look for whole word
         if(c == word[0]){
@@ -60,9 +66,9 @@ int main() {
         }
         
     }
+     * */
     in_file.close();
     std::cout << word << " found: " << word_count << " times.";
     std::cout << std::endl;
     return 0;
 }
-
