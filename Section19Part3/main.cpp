@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 
+
 int get_word_count(int count, size_t pos, const std::string &current_word, const std::string &search_word){
     pos = current_word.find(search_word, pos);
     if(pos == std::string::npos)
@@ -12,6 +13,19 @@ int get_word_count(int count, size_t pos, const std::string &current_word, const
         return get_word_count(++count, pos + search_word.length(), current_word, search_word);
 }
 
+int get_word_count(const std::string &current_word, const std::string &search_word){
+    
+    int count {0};
+    size_t pos = current_word.find(search_word, 0);
+    
+    while(pos != std::string::npos){
+        count++;
+        pos = current_word.find(search_word, pos + search_word.length());
+    }
+    
+    return count;
+    
+}
 int main() {
     
     std::string file_name{"romeoandjuliet.txt"};
@@ -39,7 +53,7 @@ int main() {
     
     
     while(in_file >> curr_word){
-        int count = get_word_count(0, 0, curr_word, word);
+        int count = get_word_count(curr_word, word);
         word_count += count;
     }
     
