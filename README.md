@@ -72,7 +72,11 @@ Part 1 required just formatting the output of some structs, into a table format.
 
 Part 2 was reading from an input file that had an answer key, student names, and their responses. Then outputting to std::cout a table of student names, scores, and the average score.
 
+#### Update: Added two more solutions to Part 3
+
 Part 3 was much more fun, in my opinion, of using an input file of Romeo and Juliet and letting a user search for a substring. The video solution showed reading in each word, and checking that word for the substring. However, doing this would miss if the substring was in a word multiple times. So I instead chose to check each character against the first character of the search word. Then loop through the remaining letters of the word to check for a complete match. If I reach a letter that doesn't match, I check if it is the first character of the search word again and (using goto with labels) go back to the inner loop, if not go back to the outer loop to continue searching. I found more matches with this comparing the different approaches. Especially if the search word was small (one or two characters).
+
+I have since added a recursive function to acheive the results. It was pointed out to me that goto and labels are not considered best practice. So I decided to do this again. First I used a recursive function. After some thought I considered this may not be the best option. It probably wouldn't be bad, considering a word from the play text will be short and have few matches, so not too many recursive calls before it returns the count. But I decided to add a second option that does not use recursion. I think I like this solution better, it's more readable and easier to understand, in my opinion. I left my previous solution in, but just commented it out.
 
 Part 4 involve copying an input file of Romeo and Juliet and prepending line numbers. I found in this one, while the video solution could check if line == "" to avoid numbering and counting blank lines, that I couldn't. The return character '\r' was the issue, so I instead checked for '\r' or '\n' to cover theses cases.
 
