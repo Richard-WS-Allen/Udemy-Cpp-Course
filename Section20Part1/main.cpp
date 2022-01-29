@@ -13,7 +13,7 @@ bool is_palindrome(const std::string& s)
 {
     // You must implement this function.
     // Since we are learning the STL - use a deque to solve the problem.
-    /*
+    
     // Using deque
     std::deque<char> d;
     for(char c : s){
@@ -31,7 +31,7 @@ bool is_palindrome(const std::string& s)
         d.pop_front();
     }
     return true;
-    */
+    /*
     // Checking in place
     auto it = s.begin();
     // Using end() for std::distance in while loop
@@ -58,7 +58,7 @@ bool is_palindrome(const std::string& s)
     }
     // Exited loop, must be a palindrome
     return true;
-    
+    */
 }
 
 int main()
