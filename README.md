@@ -1,8 +1,11 @@
 # Udemy-Cpp-Course
+
 A repo consisting of projects developed throughout the Udemy Beginning C++ Programming From Beginner to Beyond course.
 Using as a refresher of beginning topics and diving deeper into programming with C++ before I move on to more challenging topics.
 
 [Link to course](https://www.udemy.com/share/101Wd4AEYdcVlSR3kH/)
+
+I completed the course! The section details are below, showing what I learned in each section and some of the details for the challenges of each section. I'm really happy I ended up doing this course, I learned a lot during it. There's still a ton to learn, as with any programming language. I plan to continue a deeper dive into C++ and start exploring distributed and parallel programming more in depth.
 
 ## First Three Sections:
 
@@ -89,3 +92,15 @@ Challenge Part 1 - Palindrome:
 The challenge was to fill out a function to return if a string is a palindrome, ignoring case and non alpha characters. The challenge specifically asked for using a deque, which gives us the front and back functions for easy checking of characters. In this fucntion I loop through the string, checking if char isalpha and calling toupper so that I can ignore case. Then I use a while loop to check the front and back of the deque, removing each (with pop) until I get characters that are not equal and return false, or exit the loop when the size is <= 1.
 
 To expand this challenge, I wanted to try it without the two loops, and without a deque. I also wanted to time it to see if it was faster (it was). To accomplish this I used two iterators, one pointing to begin and one to end. In my loop I check if both iterators point to characters, check them (and use toupper), return false if they don't match, and increment/decrement the iterators if they do match. If one is not a character, I increment or decrement it accordingly, and keep looping while the distance is > 0.
+
+Challenge Part 2 - Linked List:
+
+This challenge was to just get used to working with linked lists and iterators. We used a Song class and a linked list of songs to act as a playlist. The challenge was to allow a user to select the next song, previous song, display the playlist, display the current song, go to the beginning of the playlist, or add a new song.
+
+Challenge Part 3 - Sets and Maps:
+
+Maps and sets are extremely useful data structures. I used them a lot in Python (sets and dictionaries) and was happy to go into more detail about how they're used in C++. We read in a txt file with a portion of text from "The Wonderful Wizard of Oz" and counted to occurence of each word. Next we captured the line number they were on, using a map with a string, set key value pair.
+
+Challenge Part 4 - 
+
+The last challenge of the section (and the course!) was to repeat the palindrome challenge, this time using a stack and queue. By using these LIFO and FIFO data structures, checking for a palindrome becomes very easy. After adding all the characters, as you remove the elements, you get them in the order you need to compare for a palindrome.
